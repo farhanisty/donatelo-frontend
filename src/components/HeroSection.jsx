@@ -2,7 +2,7 @@ import donut from "./../assets/hero-donat.webp";
 
 export default function HeroSection() {
   return (
-    <div className="absolute inset-0 flex justify-center items-center gap-10">
+    <div className="absolute inset-0 flex flex-col px-5 md:flex-row justify-center items-start md:items-center gap-10">
       <div className="">
         <img className="drop-shadow-2xl" src={donut} width="500" />
       </div>
