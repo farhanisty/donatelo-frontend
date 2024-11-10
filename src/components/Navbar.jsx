@@ -13,7 +13,7 @@ export default function Navbar() {
   }, []);
   return (
     <nav
-      className={`flex justify-between w-full px-5 py-3 z-20 sticky top-0 transition-colors duration-500 ${scrollNavbarStatus ? "backdrop-blur bg-white/50" : "text-white"}`}
+      className={`flex justify-between w-full px-5 py-3 z-20 sticky top-0 transition-colors duration-500 ${scrollNavbarStatus ? "backdrop-blur bg-white/50" : "text-white bg-[#058740]"}`}
     >
       <ul className="flex self-center gap-5">
         <li>Shop</li>
