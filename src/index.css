@@ -7,3 +7,34 @@
 body {
   font-family: "JetBrains Mono";
 }
+
+.han-hero-donut {
+  animation-name: donut-spring;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.han-hero-donut-start {
+  animation-name: donut-start;
+  animation-duration: 3s;
+}
+
+@keyframes donut-start {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: trnaslateY(0);
+  }
+}
+
+@keyframes donut-spring {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-48px);
+  }
+}

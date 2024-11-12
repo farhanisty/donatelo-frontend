@@ -1,10 +1,22 @@
+import { useState, useEffect } from "react";
 import donut from "./../assets/hero-donat.webp";
 
 export default function HeroSection() {
+  const [donatAnimation, setDonatAnimation] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDonatAnimation(true);
+    }, 2900);
+  }, []);
   return (
     <div className="absolute inset-0 flex flex-col px-5 md:flex-row justify-center items-start md:items-center gap-10">
       <div className="">
-        <img className="drop-shadow-2xl" src={donut} width="500" />
+        <img
+          className={`drop-shadow-2xl ${donatAnimation ? "han-hero-donut" : "han-hero-donut-start"}`}
+          src={donut}
+          width="500"
+        />
       </div>
       <div className="flex flex-col gap-5">
         <h1 className="text-white text-7xl inline-block max-w-[400px] font-bold drop-shadow-xl">
