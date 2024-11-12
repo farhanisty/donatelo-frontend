@@ -13,7 +13,7 @@ export default function Navbar() {
   }, []);
   return (
     <nav
-      className={`flex justify-between w-full px-5 py-3 z-20 sticky top-0 transition-colors duration-500 ${scrollNavbarStatus ? "backdrop-blur bg-white/50" : "text-white bg-[#058740]"}`}
+      className={`flex justify-between w-full px-5 py-3 z-20 sticky top-0 transition-colors duration-500 ${scrollNavbarStatus ? "backdrop-blur bg-white/50" : "text-white bg-primary"}`}
     >
       <ul className="flex self-center gap-5">
         <li>Shop</li>
@@ -21,7 +21,7 @@ export default function Navbar() {
         <li>Contact Us</li>
       </ul>
       <h1
-        className={`justify-self-center font-['caveat'] transition-colors duration-500 text-4xl ${!scrollNavbarStatus ? " text-[#FFDA47]" : ""}`}
+        className={`justify-self-center font-['caveat'] transition-colors duration-500 text-4xl ${!scrollNavbarStatus ? " text-secondary" : ""}`}
       >
         Donatello
       </h1>

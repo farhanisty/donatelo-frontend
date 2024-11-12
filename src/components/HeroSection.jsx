@@ -13,7 +13,7 @@ export default function HeroSection() {
     <div className="absolute inset-0 flex flex-col px-5 md:flex-row justify-center items-start md:items-center gap-10">
       <div className="">
         <img
-          className={`drop-shadow-2xl ${donatAnimation ? "han-hero-donut" : "han-hero-donut-start"}`}
+          className={`drop-shadow-2xl relative ${donatAnimation ? "han-hero-donut z-1" : "han-hero-donut-start z-[100]"}`}
           src={donut}
           width="500"
         />
@@ -23,7 +23,7 @@ export default function HeroSection() {
           Everyone Love Donut
         </h1>
         <div>
-          <button className="uppercase inline-block py-3 px-6 border text-white hover:bg-white transition-colors duration-300 rounded-sm hover:text-[#058740]">
+          <button className="uppercase inline-block py-3 px-6 border text-white border-white hover:bg-white transition-colors duration-300 rounded-sm hover:text-primary">
             Shop Now
           </button>
         </div>
