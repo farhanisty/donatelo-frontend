@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav
       className={`flex justify-between w-full px-5 py-3 z-20 sticky top-0 transition-colors duration-500 ${scrollNavbarStatus ? "backdrop-blur bg-white/50" : "text-white bg-primary"}`}
     >
-      <ul className="flex self-center gap-5">
+      <ul className="gap-5 hidden md:flex">
         <li>Shop</li>
         <li>About</li>
         <li>Contact Us</li>

@@ -17,7 +17,8 @@ body {
 
 .han-hero-donut-start {
   animation-name: donut-start;
-  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-duration: 2.5s;
 }
 
 @keyframes donut-start {
