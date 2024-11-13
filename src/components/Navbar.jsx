@@ -20,11 +20,13 @@ export default function Navbar() {
         <li>About</li>
         <li>Contact Us</li>
       </ul>
-      <h1
-        className={`justify-self-center font-['caveat'] transition-colors duration-500 text-4xl ${!scrollNavbarStatus ? " text-secondary" : ""}`}
-      >
-        Donatello
-      </h1>
+      <div className="absolute w-full h-full top-0 left-0 flex justify-center items-center">
+        <h1
+          className={`justify-self-center font-['caveat'] transition-colors duration-500 text-4xl ${!scrollNavbarStatus ? " text-secondary" : ""}`}
+        >
+          Donatello
+        </h1>
+      </div>
       <button>Cart</button>
     </nav>
   );
