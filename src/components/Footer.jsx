@@ -3,7 +3,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-background border-t py-3 text-center">
-      DONATELLO &copy; {yearNow}
+      DONATELLO&copy;{yearNow}
     </footer>
   );
 }

@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
-import SectionTitle from "../components/SectionTitle.jsx";
+import ContactForm from "../components/ContactForm.jsx";
 
 import heroImage from "../assets/donuts.webp";
 import donateloStoreImage from "../assets/donatelo-store.webp";
@@ -25,11 +25,12 @@ export default function Contact() {
           </h2>
           <p className="max-w-[470px] text-xs text-justify">
             Send us an email at donatelo@test.com or use the form below. If
-            you're feeling a little shy but want to provide constructive
+            you&apos;re feeling a little shy but want to provide constructive
             anonymous feedback, you may do so here. We also recommend using the
             anonymous feedback form if you do not want to share your contact
             information when providing feedback.
           </p>
+          <ContactForm />
         </div>
         <div className="w-screen md:w-3/5">
           <img
