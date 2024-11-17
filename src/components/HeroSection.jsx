@@ -10,7 +10,7 @@ export default function HeroSection() {
     }, 2500);
   }, []);
   return (
-    <div className="absolute inset-0 flex flex-col px-5 pt-10 md:flex-row justify-center items-start md:items-center gap-10">
+    <div className="w-screen h-screen flex flex-col px-5 pt-10 md:flex-row justify-center items-start md:items-center gap-10 -translate-y-[50px] bg-primary">
       <div className="w-full md:w-fit flex justify-center">
         <img
           className={`drop-shadow-2xl relative ${donatAnimation ? "han-hero-donut z-1" : "han-hero-donut-start z-[100]"}`}

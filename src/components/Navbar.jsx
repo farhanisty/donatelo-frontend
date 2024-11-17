@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`flex justify-between w-full px-5 py-3 z-20 top-0 transition-colors duration-500 ${scrollNavbarStatus && !showNavbar ? "backdrop-blur bg-white/50 sticky" : "text-white absolute"}`}
+      className={`sticky flex justify-between w-full px-5 h-[50px] items-center z-20 top-0 transition-colors duration-500 ${scrollNavbarStatus && !showNavbar ? "backdrop-blur bg-white/50" : "text-white"}`}
     >
       <ul
         onClick={() => {

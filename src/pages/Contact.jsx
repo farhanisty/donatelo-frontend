@@ -9,9 +9,14 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <section className="w-screen h-screen">
+      <section
+        className="w-screen relative"
+        style={{
+          height: "calc(100vh - 50px)",
+        }}
+      >
         <img
-          className="object-cover object-center w-screen h-screen max-h-screen"
+          className="absolute object-cover object-center w-screen h-screen max-h-screen -translate-y-[50px]"
           src={heroImage}
           alt="donuts"
         />

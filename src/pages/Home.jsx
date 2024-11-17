@@ -1,4 +1,5 @@
 import Navbar from "./../components/Navbar.jsx";
+import Footer from "./../components/Footer.jsx";
 import HeroSection from "./../components/HeroSection.jsx";
 import SectionTitle from "./../components/SectionTitle.jsx";
 import Container from "./../layout/Container.jsx";
@@ -7,7 +8,12 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <header className="relative top-0 w-screen h-screen bg-primary">
+      <header
+        className="relative top-0 w-screen bg-primary"
+        style={{
+          height: "calc(100vh - 50px)",
+        }}
+      >
         <HeroSection />
       </header>
       <section className="min-h-screen bg-background pt-10">
@@ -20,6 +26,8 @@ export default function Home() {
           </p>
         </Container>
       </section>
+
+      <Footer />
     </>
   );
 }
