@@ -10,7 +10,7 @@ export default function Home() {
       <header className="w-screen h-screen bg-primary">
         <HeroSection />
       </header>
-      <section className="min-h-screen bg-[#FFFBF2] pt-10">
+      <section className="min-h-screen bg-background pt-10">
         <Container>
           <SectionTitle title="Best seller" />
           <p className="max-w-[400px] pt-10">

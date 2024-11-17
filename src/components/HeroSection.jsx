@@ -11,15 +11,15 @@ export default function HeroSection() {
   }, []);
   return (
     <div className="absolute inset-0 flex flex-col px-5 pt-10 md:flex-row justify-center items-start md:items-center gap-10">
-      <div className="">
+      <div className="w-full md:w-fit flex justify-center">
         <img
           className={`drop-shadow-2xl relative ${donatAnimation ? "han-hero-donut z-1" : "han-hero-donut-start z-[100]"}`}
           src={donut}
           width="500"
         />
       </div>
-      <div className="flex flex-col gap-5">
-        <h1 className="text-white text-5xl md:text-7xl inline-block max-w-[400px] font-bold drop-shadow-xl">
+      <div className="">
+        <h1 className="mb-8 text-white text-5xl md:text-7xl inline-block max-w-[400px] font-bold drop-shadow-xl">
           Everyone Love Donut
         </h1>
         <div>
