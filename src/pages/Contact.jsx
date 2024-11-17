@@ -1,12 +1,11 @@
 import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
 import SectionTitle from "../components/SectionTitle.jsx";
 
 import heroImage from "../assets/donuts.webp";
 import donateloStoreImage from "../assets/donatelo-store.webp";
 
 export default function Contact() {
-  const yearNow = new Date().getFullYear();
-
   return (
     <>
       <Navbar />
@@ -40,10 +39,7 @@ export default function Contact() {
           />
         </div>
       </section>
-
-      <footer className="bg-background border-t py-3 text-center">
-        DONATELLO &copy; {yearNow}
-      </footer>
+      <Footer />
     </>
   );
 }
