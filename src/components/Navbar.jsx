@@ -12,9 +12,10 @@ export default function Navbar() {
       }
     });
   }, []);
+
   return (
     <nav
-      className={`flex justify-between w-full px-5 py-3 z-20 sticky top-0 transition-colors duration-500 ${scrollNavbarStatus && !showNavbar ? "backdrop-blur bg-white/50" : "text-white bg-primary"}`}
+      className={`flex justify-between w-full px-5 py-3 z-20 top-0 transition-colors duration-500 ${scrollNavbarStatus && !showNavbar ? "backdrop-blur bg-white/50 sticky" : "text-white absolute"}`}
     >
       <ul
         onClick={() => {
@@ -37,7 +38,7 @@ export default function Navbar() {
       >
         <li>Shop</li>
         <li>About</li>
-        <li>Contact Us</li>
+        <li>Contact</li>
       </ul>
       <div className="absolute w-full h-full top-0 left-0 flex justify-center items-center">
         <h1

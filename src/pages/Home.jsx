@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <header className="w-screen h-screen bg-primary">
+      <header className="relative top-0 w-screen h-screen bg-primary">
         <HeroSection />
       </header>
       <section className="min-h-screen bg-background pt-10">
