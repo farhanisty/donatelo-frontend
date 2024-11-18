@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Navbar />
       <header
-        className="relative top-0 w-screen bg-primary"
+        className="relative top-0 w-screen"
         style={{
           height: "calc(100vh - 50px)",
         }}
