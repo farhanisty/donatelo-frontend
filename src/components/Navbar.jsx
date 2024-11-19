@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import Cart from "./Cart";
 
 export default function Navbar() {
   const [scrollNavbarStatus, setScrollNavbarStatus] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
-  const [showCart, setShowCart] = useState(true);
+  const [showCart, setShowCart] = useState(false);
+
+  const location = useLocation();
+
+  console.log(location);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -46,15 +51,27 @@ export default function Navbar() {
         <ul
           className={`${showNavbar ? "" : "-translate-x-[100vw]"} transition-transform duration-500 gap-5 flex flex-col md:flex-row md:translate-x-0 pt-[5rem] md:pt-0 px-[2rem] md:px-0 fixed md:static inset-0 z-[1000] bg-background text-black md:bg-transparent ${!scrollNavbarStatus ? "md:text-white" : ""}`}
         >
-          <li>Shop</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li
+            className={`hover:-translate-y-[2px] transition-transform duration-200 ${location.pathname == "/shop" ? "" : "opacity-70"}`}
+          >
+            <NavLink to="/shop">Shop</NavLink>
+          </li>
+          <li
+            className={`hover:-translate-y-[2px] transition-transform duration-200 ${location.pathname == "/about" ? "" : "opacity-70"}`}
+          >
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li
+            className={`hover:-translate-y-[2px] transition-transform duration-200 ${location.pathname == "/contact" ? "" : "opacity-70"}`}
+          >
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
         </ul>
         <div className="absolute w-full h-full top-0 left-0 flex justify-center items-center">
           <h1
             className={`justify-self-center font-['caveat'] transition-colors duration-500 text-4xl ${!scrollNavbarStatus ? " text-secondary" : ""}`}
           >
-            Donatello
+            <NavLink to="/">Donatello</NavLink>
           </h1>
         </div>
         <button
