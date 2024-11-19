@@ -1,3 +1,4 @@
+import { IoMdClose } from "react-icons/io";
 import { useEffect } from "react";
 
 export default function Cart({ showCart, closeCart }) {
@@ -11,7 +12,7 @@ export default function Cart({ showCart, closeCart }) {
       <div className="flex justify-between items-center">
         <h1>CART</h1>
         <button onClick={closeCart} className="font-bold text-2xl opacity-50">
-          X
+          <IoMdClose />
         </button>
       </div>
     </section>
