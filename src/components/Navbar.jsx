@@ -9,8 +9,6 @@ export default function Navbar() {
 
   const location = useLocation();
 
-  console.log(location);
-
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY) {
