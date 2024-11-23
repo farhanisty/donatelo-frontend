@@ -8,14 +8,6 @@ import { useQuery } from "react-query";
 import { useState } from "react";
 import { getDonuts } from "./../repository/donut.js";
 
-function splitArray(array, maxItems) {
-  const result = [];
-  for (let i = 0; i < array.length; i += maxItems) {
-    result.push(array.slice(i, i + maxItems));
-  }
-  return result;
-}
-
 export default function Shop() {
   const { data: donuts, isLoading } = useQuery("getDonuts", getDonuts);
 
