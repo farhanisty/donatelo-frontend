@@ -42,6 +42,7 @@ export default function Home() {
                   .reverse()
                   .map((donut) => (
                     <ProductBox
+                      id={donut.id}
                       name={donut.name}
                       key={donut.id}
                       price={donut.price}

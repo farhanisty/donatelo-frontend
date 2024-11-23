@@ -1,11 +1,12 @@
+import { NavLink } from "react-router-dom";
 import { VscDiffAdded } from "react-icons/vsc";
 
-export default function ProductBox({ name, price, image }) {
+export default function ProductBox({ id, name, price, image }) {
   const baseImageUrl = import.meta.env.VITE_BASE_IMAGE_URL;
   return (
     <div className="bg-secondary flex-[0_0_30%] p-4 flex flex-col items-center rounded">
       <h1 className="text-center font-bold uppercase text-xl cursor-pointer hover:underline">
-        {name}
+        <NavLink to={`/menu/${id}`}>{name}</NavLink>
       </h1>
       <img
         className="my-10 object-fit w-[150px] h-[150px]"

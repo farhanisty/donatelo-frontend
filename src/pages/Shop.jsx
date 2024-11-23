@@ -47,6 +47,7 @@ export default function Shop() {
               <ul className="w-full flex flex-wrap flex-col md:flex-row  gap-5">
                 {donuts.map((donut) => (
                   <ProductBox
+                    id={donut.id}
                     name={donut.name}
                     key={donut.id}
                     price={donut.price}
