@@ -15,11 +15,23 @@ export default function Contact() {
           height: "calc(100vh - 50px)",
         }}
       >
-        <img
-          className="absolute object-cover object-center w-screen h-screen max-h-screen -translate-y-[50px]"
-          src={heroImage}
-          alt="donuts"
-        />
+        <div
+          className="relative w-screen h-screen bg-cover bg-center bg-no-repeat absolute -top-[50px]"
+          style={{
+            backgroundImage: `url(${heroImage})`,
+          }}
+        >
+          <div className="absolute w-screen h-full bg-blackOverlay flex justify-center items-center">
+            <h1
+              className="md:text-[10rem] text-5xl text-white font-bold"
+              style={{
+                textShadow: "10px 10px 10px rgba(0,0,0,.5)",
+              }}
+            >
+              CONTACT
+            </h1>
+          </div>
+        </div>
       </section>
 
       <section className="bg-background flex w-screen flex flex-col md:flex-row">
