@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Cart from "./Cart";
 
 export default function Navbar({ solid = false }) {
   const [scrollNavbarStatus, setScrollNavbarStatus] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
   const [showCart, setShowCart] = useState(false);
+
+  const cartLength = useSelector((state) => {
+    return state.cart.data.length;
+  });
 
   const location = useLocation();
 
@@ -79,7 +84,7 @@ export default function Navbar({ solid = false }) {
             }}
             className="cursor-pointer relative hover:opacity-70"
           >
-            Cart
+            Cart{cartLength ? `(${cartLength})` : ""}
           </button>
         </nav>
       </>
@@ -145,7 +150,7 @@ export default function Navbar({ solid = false }) {
           }}
           className="cursor-pointer relative hover:opacity-70"
         >
-          Cart
+          Cart{cartLength ? `(${cartLength})` : ""}
         </button>
       </nav>
     </>

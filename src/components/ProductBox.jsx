@@ -1,8 +1,12 @@
 import { NavLink } from "react-router-dom";
 import { VscDiffAdded } from "react-icons/vsc";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/slices/cartSlice.js";
 
 export default function ProductBox({ id, name, price, image }) {
   const baseImageUrl = import.meta.env.VITE_BASE_IMAGE_URL;
+  const dispatch = useDispatch();
+
   return (
     <div className="bg-secondary flex-[0_0_30%] p-4 flex flex-col items-center rounded">
       <h1 className="text-center font-bold uppercase text-xl cursor-pointer hover:underline">
@@ -19,7 +23,7 @@ export default function ProductBox({ id, name, price, image }) {
         <h2>Rp. {price}</h2>
         <button
           onClick={() => {
-            console.log("hello world");
+            return dispatch(addToCart({ id, qty: 1 }));
           }}
         >
           <VscDiffAdded className="text-3xl hover:scale-110" />

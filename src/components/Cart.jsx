@@ -1,5 +1,4 @@
 import { IoMdClose } from "react-icons/io";
-
 import CartItem from "./CartItem.jsx";
 
 export default function Cart({ showCart, closeCart }) {
