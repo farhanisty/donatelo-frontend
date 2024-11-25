@@ -8,6 +8,7 @@ const store = configureStore({
 });
 
 store.subscribe(() => {
+  localStorage.setItem("carts", JSON.stringify(store.getState().cart));
   console.log("STORE CHANGED : ", store.getState());
 });
 
