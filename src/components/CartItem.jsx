@@ -1,6 +1,7 @@
 import donutImage from "./../assets/hero-donat.webp";
 import { useDispatch } from "react-redux";
 import { addToCart, decrementCart } from "../redux/slices/cartSlice.js";
+import numberToRupiah from "../service/numberToRupiah.js";
 
 export default function CartItem({ product, qty }) {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ export default function CartItem({ product, qty }) {
       />
       <div className="flex flex-col gap-2">
         <h1 className="text-xl uppercase font-semibold">{product.name}</h1>
-        <h2>Rp {product.price}/pcs</h2>
+        <h2>{numberToRupiah(product.price * qty)}</h2>
         <div className="w-min flex border border-black py-1 rounded-full">
           <button
             onClick={() => {

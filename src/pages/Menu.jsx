@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import { getDonuts } from "./../repository/donut.js";
+import { useDispatch } from "react-redux";
+import { addToCart } from "./../redux/slices/cartSlice.js";
 import Navbar from "./../components/Navbar.jsx";
 import Footer from "./../components/Footer.jsx";
 import Container from "./../layout/Container.jsx";
@@ -11,6 +13,7 @@ export default function Menu() {
   const { id } = useParams();
   const { data: donuts, isLoading } = useQuery("getDonuts", getDonuts);
   const baseImageUrl = import.meta.env.VITE_BASE_IMAGE_URL;
+  const dispatch = useDispatch();
 
   if (isLoading) {
     return <h1>Loading</h1>;
@@ -49,7 +52,12 @@ export default function Menu() {
                 <h3 className="text-2xl mb-5">
                   <span className="font-semibold">Rp. {donut.price}</span>/pcs
                 </h3>
-                <button className="cursor-pointer inline-block bg-primary py-3 px-5 text-white">
+                <button
+                  onClick={() => {
+                    return dispatch(addToCart({ id: donut.id, qty: 1 }));
+                  }}
+                  className="cursor-pointer inline-block bg-primary py-3 px-5 text-white hover:opacity-70"
+                >
                   Add to cart
                 </button>
               </div>
@@ -61,20 +69,17 @@ export default function Menu() {
           <Container>
             <SectionTitle title="related product" />
             <ul className="w-full flex flex-col md:flex-row justify-between gap-5 mt-10">
-              {donuts
-                .slice(-3)
-                .reverse()
-                .map((donut) => {
-                  return (
-                    <ProductBox
-                      id={donut.id}
-                      name={donut.name}
-                      key={donut.id}
-                      price={donut.price}
-                      image={donut.image}
-                    />
-                  );
-                })}
+              {popularDonut.map((donut) => {
+                return (
+                  <ProductBox
+                    id={donut.id}
+                    name={donut.name}
+                    key={donut.id}
+                    price={donut.price}
+                    image={donut.image}
+                  />
+                );
+              })}
             </ul>
           </Container>
         </section>
