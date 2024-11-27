@@ -4,16 +4,16 @@ import { useRef, useEffect } from "react";
 import CartItem from "./CartItem.jsx";
 import { getDonuts } from "../repository/donut.js";
 import { useSelector } from "react-redux";
+import { NavLink, useLocation } from "react-router-dom";
 
 export default function Cart({ showCart, closeCart }) {
   const { data: donuts, isLoading } = useQuery("getDonuts", getDonuts);
 
-  let carts = [];
-  carts = useSelector((state) => {
+  const carts = useSelector((state) => {
     return state.cart.data;
   });
 
-  const lengthCart = carts.length;
+  console.log(carts);
 
   return (
     <section
@@ -52,12 +52,22 @@ export default function Cart({ showCart, closeCart }) {
         </div>
       )}
       <div className="absolute bottom-0 w-full h-[70px] left-0 px-5 z-[1002]">
-        <button
-          disabled={lengthCart ? false : true}
-          className="w-full bg-primary py-3 text-white hover:opacity-70 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          Buy
-        </button>
+        {carts.length ? (
+          <NavLink
+            to="/checkout"
+            disabled={carts.length ? false : true}
+            className="w-full inline-block text-center bg-primary py-3 text-white hover:opacity-70 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Checkout
+          </NavLink>
+        ) : (
+          <button
+            disabled={carts.length ? false : true}
+            className="w-full inline-block text-center bg-primary py-3 text-white hover:opacity-70 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Checkout
+          </button>
+        )}
       </div>
     </section>
   );
