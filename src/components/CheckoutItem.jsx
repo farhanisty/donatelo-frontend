@@ -1,4 +1,3 @@
-import image from "../assets/hero-donat.webp";
 import numberToRupiah from "../service/numberToRupiah.js";
 
 export default function CheckoutItem({ product, qty }) {
