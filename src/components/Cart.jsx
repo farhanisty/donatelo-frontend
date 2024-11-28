@@ -1,10 +1,9 @@
 import { IoMdClose } from "react-icons/io";
 import { useQuery } from "react-query";
-import { useRef, useEffect } from "react";
 import CartItem from "./CartItem.jsx";
 import { getDonuts } from "../repository/donut.js";
 import { useSelector } from "react-redux";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Cart({ showCart, closeCart }) {
   const { data: donuts, isLoading } = useQuery("getDonuts", getDonuts);
@@ -12,9 +11,6 @@ export default function Cart({ showCart, closeCart }) {
   const carts = useSelector((state) => {
     return state.cart.data;
   });
-
-  console.log(carts);
-
   return (
     <section
       className={`fixed top-0 right-0 z-[1000] max-w-[500px] border-l w-full h-screen bg-background transition-transform duration-500 px-5 py-5 ${showCart ? "translate-x-0" : "translate-x-[100%]"}`}
