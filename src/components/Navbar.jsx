@@ -70,6 +70,11 @@ export default function Navbar({ solid = false }) {
             >
               <NavLink to="/contact">Contact</NavLink>
             </li>
+            <li
+              className={`hover:-translate-y-[2px] transition-transform duration-200 ${location.pathname == "/order" ? "" : "opacity-70"}`}
+            >
+              <NavLink to="/order">Order</NavLink>
+            </li>
           </ul>
           <div className="absolute w-full h-full top-0 left-0 flex justify-center items-center">
             <h1
@@ -135,6 +140,11 @@ export default function Navbar({ solid = false }) {
             className={`hover:-translate-y-[2px] transition-transform duration-200 ${location.pathname == "/contact" ? "" : "opacity-70"}`}
           >
             <NavLink to="/contact">Contact</NavLink>
+          </li>
+          <li
+            className={`hover:-translate-y-[2px] transition-transform duration-200 ${location.pathname == "/order" ? "" : "opacity-70"}`}
+          >
+            <NavLink to="/order">Order</NavLink>
           </li>
         </ul>
         <div className="absolute w-full h-full top-0 left-0 flex justify-center items-center">
