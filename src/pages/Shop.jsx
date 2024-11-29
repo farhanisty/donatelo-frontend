@@ -1,6 +1,6 @@
 import Navbar from "./../components/Navbar.jsx";
 import Footer from "./../components/Footer.jsx";
-import heroShopImage from "./../assets/hero-shop.jpg";
+import heroShopImage from "./../assets/hero-shop.webp";
 import SectionTitle from "./../components/SectionTitle.jsx";
 import Container from "./../layout/Container.jsx";
 import ProductBox from "./../components/ProductBox.jsx";
