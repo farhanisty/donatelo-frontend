@@ -6,6 +6,7 @@ import Contact from "./pages/Contact.jsx";
 import Menu from "./pages/Menu.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import PageNotFound from "./pages/PageNotFound.jsx";
+import Order from "./pages/Order.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/order" element={<Order />} />
         <Route path="/menu/:id" element={<Menu />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
