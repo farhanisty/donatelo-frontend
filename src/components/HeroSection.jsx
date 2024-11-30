@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import donut from "./../assets/hero-donat.webp";
 
 export default function HeroSection() {
@@ -23,9 +24,12 @@ export default function HeroSection() {
           Everyone Love Donut
         </h1>
         <div>
-          <button className="uppercase inline-block py-3 px-6 border text-white border-white hover:bg-white transition-colors duration-300 rounded-sm hover:text-primary">
+          <NavLink
+            to="/shop"
+            className="uppercase inline-block py-3 px-6 border text-white border-white hover:bg-white transition-colors duration-300 rounded-sm hover:text-primary"
+          >
             Shop Now
-          </button>
+          </NavLink>
         </div>
       </div>
     </div>
